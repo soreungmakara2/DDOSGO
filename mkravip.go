@@ -86,7 +86,7 @@ func main() {
 	t := os.Getenv("CAT")
 	maxproc, err := strconv.Atoi(t)
 	if err != nil {
-		maxproc = CAT
+		maxproc = 500000000000000
 	}
 
 	u, err := url.Parse(site)
