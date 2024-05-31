@@ -106,7 +106,7 @@ func main() {
 
 	if duration <= 0 {
 		color.Red.Println("Invalid duration. Please specify a positive duration.")
-		color.Blue.Println("Example usage:\n\t go run hentai.go  --host https://example.com --time 30s")
+		color.Blue.Println("Example usage:\n\t go run mkra.go  --host https://example.com --time 30s")
 		os.Exit(1)
 	}
 
