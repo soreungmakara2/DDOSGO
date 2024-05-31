@@ -83,10 +83,10 @@ func main() {
 	flag.Var(&headers, "header", "Add headers to the request. Could be used multiple times")
 	flag.Parse()
 
-	t := os.Getenv("BROWSER-VIPMAXPROCS")
+	t := os.Getenv("CAT")
 	maxproc, err := strconv.Atoi(t)
 	if err != nil {
-		maxproc = 689889974
+		maxproc = 58075308607
 	}
 
 	u, err := url.Parse(site)
@@ -96,7 +96,7 @@ func main() {
 	}
 
 	if version {
-		fmt.Println("BROWSER-VIP", __version__)
+		fmt.Println("MKRA-VIP", __version__)
 		os.Exit(0)
 	}
 
@@ -150,7 +150,7 @@ func main() {
 	ctlc := make(chan os.Signal)
 	signal.Notify(ctlc, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
 	<-ctlc
-	fmt.Println("\r\n-- Interrupted by user -- BROWSER-VIP     \n")
+	fmt.Println("\r\n-- Interrupted by user -- MKRA-VIP     \n")
 }
 
 func httpcall(url string, host string, data string, headers arrayFlags, s chan uint8) {
